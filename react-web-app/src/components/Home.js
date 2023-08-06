@@ -1,7 +1,22 @@
+import React, { useState, useRef } from 'react';
 import "../styles/app.css";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(new Audio('/images/TitleScreen.mp3'));
+
+  const handlePlay = () => {
+    audioRef.current.play();
+    setIsPlaying(true);
+  }
+
+  const handlePause = () => {
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0;
+    setIsPlaying(false);
+  }
+
   return (
     <div>
       {/* <Helmet>
@@ -12,78 +27,41 @@ export default function Home() {
 
       <div className="viewport">
         <div className="viewport-top">
-          <header
-            className="site-head"
-            // style={{
-            //     ...(site.cover_image && {
-            //         backgroundImage: `url(${site.cover_image})`,
-            //     }),
-            // }}
-          >
+          <header className="site-head">
             <div className="container">
-                <div className="site-mast">
-                    <div className="site-mast-left">
-                        <Link to="/">
-                          <img
-                            className="site-logo"
-                            src='/images/pokemon_title.png'
-                            alt='logo'
-                          />
-                        </Link>
-                    </div>
-                    <div className="site-mast-right">
-                        {/* {site.twitter && (
-                            <a
-                                href={twitterUrl}
-                                className="site-nav-item"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    className="site-nav-icon"
-                                    src="/images/icons/twitter.svg"
-                                    alt="Twitter"
-                                />
-                            </a>
-                        )} */}
-                        {/* {site.facebook && (
-                            <a
-                                href={facebookUrl}
-                                className="site-nav-item"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    className="site-nav-icon"
-                                    src="/images/icons/facebook.svg"
-                                    alt="Facebook"
-                                />
-                            </a>
-                        )} */}
-                        <a
-                            className="site-nav-item"
-                            // href={`https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                className="site-nav-icon"
-                                src="/images/icons/rss.svg"
-                                alt="RSS Feed"
-                            />
-                        </a>
-                    </div>
+              <div className="site-mast">
+                <div className="site-mast-left">
+                  <Link to="/">
+                    <img
+                      className="site-logo"
+                      src='/images/pokemon_title.png'
+                      alt='logo'
+                    />
+                  </Link>
                 </div>
-                {/* {isHome ? (
-                  <div className="site-banner">
-                    <h1 className="site-banner-title">
-                      {site.title}
-                    </h1>
-                    <p className="site-banner-desc">
-                      {site.description}
-                    </p>
-                  </div>
-                ) : null} */}
+                <div className="site-mast-right">
+                  <button
+                    className="site-nav-button"
+                    onClick={isPlaying ? handlePause : handlePlay}
+                  >
+                    { isPlaying ? 'Pause BGM' : 'Play BGM'}
+                  </button>
+                </div>
+              </div>
+                <div className="site-banner">
+                  <img
+                    className="site-banner-title"
+                    src='/images/pokemon_title.png'
+                    alt='logo'
+                  />
+
+                  <h1 className="site-banner-title">
+                    Pokemon app
+                  </h1>
+                  <p className="site-banner-desc">
+                    hello
+                  </p>
+                </div>
               <nav className="site-nav">
                 <div className="site-nav-left">
                   {/* The navigation items as setup in Ghost */}
@@ -93,12 +71,12 @@ export default function Home() {
                   /> */}
                 </div>
                 <div className="site-nav-right">
-                  {/* <Link
+                  <Link
                       className="site-nav-button"
                       to="/about"
                   >
                       About
-                  </Link> */}
+                  </Link>
                 </div>
               </nav>
             </div>
