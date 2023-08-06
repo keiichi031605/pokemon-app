@@ -59,7 +59,7 @@ export default function Home() {
                     />
                     <img
                       className="site-banner-pokemon"
-                      src='/images/pokemons/bulbasaur.png'
+                      src='/images/pokemon/bulbasaur.png'
                       alt='ash'
                     />
                   </div>
