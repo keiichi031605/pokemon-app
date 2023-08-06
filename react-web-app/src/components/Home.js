@@ -19,12 +19,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* <Helmet>
-        <html lang={site.lang} />
-        <style type="text/css">{`${site.codeinjection_styles}`}</style>
-        <body className={bodyClass} />
-      </Helmet> */}
-
       <div className="viewport">
         <div className="viewport-top">
           <header className="site-head">
@@ -34,7 +28,7 @@ export default function Home() {
                   <Link to="/">
                     <img
                       className="site-logo"
-                      src='/images/pokemon_title.png'
+                      src='/images/logo.png'
                       alt='logo'
                     />
                   </Link>
@@ -49,18 +43,32 @@ export default function Home() {
                 </div>
               </div>
                 <div className="site-banner">
-                  <img
-                    className="site-banner-title"
-                    src='/images/pokemon_title.png'
-                    alt='logo'
-                  />
-
-                  <h1 className="site-banner-title">
-                    Pokemon app
-                  </h1>
-                  <p className="site-banner-desc">
-                    hello
-                  </p>
+                  <div>
+                    <img
+                      className="site-banner-title"
+                      src='/images/pokemon_title.png'
+                      alt='title'
+                    />
+                  </div>
+                  <div className='site-banner-ash-pokemon'>
+                    <img
+                      className="site-banner-ash"
+                      src='/images/ash.png'
+                      alt='ash'
+                    />
+                    <img
+                      className="site-banner-pokemon"
+                      src='/images/pokemons/bulbasaur.png'
+                      alt='ash'
+                    />
+                  </div>
+                    <img
+                      className="site-banner-keiichi"
+                      src='/images/keiichi.png'
+                      alt='ash'
+                    />
+                  <div>
+                  </div>
                 </div>
               <nav className="site-nav">
                 <div className="site-nav-left">
@@ -83,32 +91,18 @@ export default function Home() {
           </header>
 
           <main className="site-main">
-            {/* All the main content gets inserted here, index.js, post.js */}
-            {/* {children} */}
+            {/* contents */}
           </main>
         </div>
 
         <div className="viewport-bottom">
-          {/* The footer at the very bottom of the screen */}
           <footer className="site-foot">
             <div className="site-foot-nav container">
               <div className="site-foot-nav-left">
-                {/* <Link to="/">{site.title}</Link> © 2021 &mdash; */}
-                Published with{" "}
-                <a
-                    className="site-foot-nav-item"
-                    href="https://ghost.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Ghost
-                </a>
+                Developed by Keiichi
               </div>
               <div className="site-foot-nav-right">
-                {/* <Navigation
-                    data={site.navigation}
-                    navClass="site-foot-nav-item"
-                /> */}
+
               </div>
             </div>
           </footer>

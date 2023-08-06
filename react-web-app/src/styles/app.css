@@ -663,7 +663,7 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .site-head {
-  padding-top: 16px;
+  padding: 20px 0 20px 0;
   color: #fff;
   background: var(--color-base);
   background-position: center;
@@ -688,7 +688,7 @@ h6 {
 }
 
 .site-logo {
-  height: 52px;
+  height: 60px;
 }
 
 .site-mast {
@@ -709,10 +709,12 @@ h6 {
 .site-banner {
   max-width: 80%;
   margin: 0 auto;
-  padding: 10vw 0;
+  padding: 10vw 0 4vw 0;
   text-align: center;
 }
 
+.site-banner-ash,
+.site-banner-pokemon,
 .site-banner-title {
   margin: 0;
   padding: 0;
@@ -720,6 +722,22 @@ h6 {
   font-size: 4rem;
   line-height: 1.3em;
   height: 100px;
+}
+.site-banner-ash-pokemon {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.site-banner-ash {
+  margin: 32px 8px 0 0;
+}
+.site-banner-pokemon {
+  margin-top: 32px 0 0 8px;
+  height: 52px
+}
+.site-banner-keiichi {
+  margin-top: 16px;
+  width: 120px;
 }
 
 .site-banner-desc {
