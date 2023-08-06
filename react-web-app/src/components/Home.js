@@ -1,10 +1,11 @@
 import React, { useState, useRef } from 'react';
 import "../styles/app.css";
 import { Link } from "react-router-dom";
+import Navigation from "./Navigation";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(new Audio('/images/TitleScreen.mp3'));
+  const audioRef = useRef(new Audio('/images/home_bgm.mp3'));
 
   const handlePlay = () => {
     audioRef.current.play();
@@ -28,7 +29,7 @@ export default function Home() {
                   <Link to="/">
                     <img
                       className="site-logo"
-                      src='/images/logo.png'
+                      src='/images/monster_ball.png'
                       alt='logo'
                     />
                   </Link>
@@ -72,11 +73,7 @@ export default function Home() {
                 </div>
               <nav className="site-nav">
                 <div className="site-nav-left">
-                  {/* The navigation items as setup in Ghost */}
-                  {/* <Navigation
-                      data={site.navigation}
-                      navClass="site-nav-item"
-                  /> */}
+                  <Navigation />
                 </div>
                 <div className="site-nav-right">
                   <Link
