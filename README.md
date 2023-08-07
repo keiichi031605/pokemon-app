@@ -6,4 +6,4 @@
 
 # pokemon-app
 
-![Screenshot 2023-08-07 at 8 52 47 am](https://github.com/keiichi031605/pokemon-app/assets/58890575/290e0be1-9bf0-421e-9714-880cd3eb5b01)
+<img width="1161" alt="Screenshot 2023-08-07 at 6 17 54 pm" src="https://github.com/keiichi031605/pokemon-app/assets/58890575/424278fe-063a-4424-bbe3-38890a711483">
