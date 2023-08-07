@@ -61,7 +61,7 @@ export default function Home() {
                     <img
                       className="site-banner-pokemon"
                       src='/images/pokemon/bulbasaur.png'
-                      alt='ash'
+                      alt='pokemon'
                     />
                   </div>
                     <img
@@ -76,14 +76,14 @@ export default function Home() {
                 <div className="site-nav-left">
                   <Navigation />
                 </div>
-                <div className="site-nav-right">
+                {/* <div className="site-nav-right">
                   <Link
                       className="site-nav-button"
                       to="/about"
                   >
                       About
                   </Link>
-                </div>
+                </div> */}
               </nav>
             </div>
           </header>

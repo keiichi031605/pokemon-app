@@ -14,7 +14,12 @@ export default function Navigation() {
       <div className='post-feed'>
         {cards.map((card, i) => {
           return (
-            <Link to={card.url} className="post-card" key={i}>
+            <Link
+              to={card.url}
+              className="post-card"
+              key={i}
+              target="_blank"
+            >
               <header className="post-card-header">
                 {card.image ? 
                   <div
