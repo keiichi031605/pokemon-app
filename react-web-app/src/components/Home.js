@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import "../styles/app.css";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
+import Cards from "./Cards";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -59,7 +60,7 @@ export default function Home() {
                     />
                     <img
                       className="site-banner-pokemon"
-                      src='/images/pokemons/bulbasaur.png'
+                      src='/images/pokemon/bulbasaur.png'
                       alt='ash'
                     />
                   </div>
@@ -88,7 +89,7 @@ export default function Home() {
           </header>
 
           <main className="site-main">
-            {/* contents */}
+            <Cards />
           </main>
         </div>
 

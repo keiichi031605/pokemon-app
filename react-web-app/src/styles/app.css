@@ -709,7 +709,7 @@ h6 {
 .site-banner {
   max-width: 80%;
   margin: 0 auto;
-  padding: 10vw 0 4vw 0;
+  padding: 8vw 0 4vw 0;
   text-align: center;
 }
 
@@ -806,6 +806,8 @@ h6 {
 .post-card {
   color: inherit;
   text-decoration: none;
+  /* border-radius: 8px;
+  border-color: #0c1a4f; */
 }
 
 .post-card:hover {
@@ -818,7 +820,6 @@ h6 {
   line-height: 1.15em;
   color: var(--color-secondary);
 }
-
 
 .post-card-title {
   margin: 0 0 10px 0;
@@ -837,47 +838,6 @@ h6 {
   background: var(--color-secondary) no-repeat center center;
   background-size: cover;
 }
-
-.post-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 0 0 0;
-  color: var(--color-secondary);
-}
-
-.post-card-footer-left {
-  display: flex;
-  align-items: center;
-}
-
-.post-card-footer-right {
-  display: flex;
-  flex-direction: column;
-}
-
-.post-card-avatar {
-  width: 30px;
-  height: 30px;
-  margin: 0 7px 0 0;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.post-card-avatar .author-profile-image {
-  display: block;
-  width: 100%;
-  background: var(--color-secondary);
-  border-radius: 100%;
-  object-fit: cover;
-}
-
-.post-card-avatar .default-avatar {
-  width: 26px;
-}
-
 
 /* Tag Archives
 /* ---------------------------------------------------------- */
