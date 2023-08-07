@@ -28,7 +28,7 @@ export default function Navigation() {
                 }
                 <h2 className="post-card-title">{card.title}</h2>
               </header>
-              <section className="post-card-excerpt">{card.contents}</section>
+              <section className="post-card-contents">{card.contents}</section>
             </Link>
           )
         })}
